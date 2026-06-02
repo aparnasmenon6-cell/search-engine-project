@@ -4,8 +4,8 @@ phases:
     runtime-versions:
       python: 3.10
     commands:
-      - pip install requests -t .
-      - pip install requests-aws4auth -t .
+      - pip install requests -t "Search Function"
+      - pip install requests-aws4auth -t "Search Function"
   build:
     commands:
       - aws cloudformation package --template-file "Search Function/search-function.yaml" --s3-bucket artifactspgpcc --output-template-file search.yaml
